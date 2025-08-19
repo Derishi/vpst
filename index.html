@@ -14,7 +14,7 @@
             font-family: 'Inter', sans-serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/1a202c/ffffff?text=VPST');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/1F2937/FFFFFF?text=VPST&font=inter');
             background-size: cover;
             background-position: center;
         }
@@ -22,24 +22,37 @@
             @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
         }
         .section-subtitle {
-            @apply text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto;
+            @apply text-lg text-gray-600 mb-16 text-center max-w-3xl mx-auto;
+            margin-bottom: 1rem;
         }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vpst-orange': '#F97316',
+                        'vpst-dark': '#1F2937',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-700">
 
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-800">
-                VP<span class="text-blue-600">S</span>T
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="assets/vpst_logo.png" alt="VPST Logo" class="h-12 mr-2" onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/1F2937?text=VPST';">
             </a>
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
-                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
-                <a href="#products" class="text-gray-600 hover:text-blue-600 transition-colors">Products</a>
-                <a href="#team" class="text-gray-600 hover:text-blue-600 transition-colors">Our Team</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                <a href="#home" class="text-gray-600 hover:text-vpst-orange transition-colors">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-vpst-orange transition-colors">Services</a>
+                <a href="#products" class="text-gray-600 hover:text-vpst-orange transition-colors">Products</a>
+                <a href="#team" class="text-gray-600 hover:text-vpst-orange transition-colors">Our Team</a>
+                <a href="#contact" class="text-gray-600 hover:text-vpst-orange transition-colors">Contact</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden">
                 <i data-lucide="menu"></i>
@@ -47,11 +60,11 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
-            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-600">Services</a>
-            <a href="#products" class="block py-2 text-gray-600 hover:text-blue-600">Products</a>
-            <a href="#team" class="block py-2 text-gray-600 hover:text-blue-600">Our Team</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+            <a href="#home" class="block py-2 text-gray-600 hover:text-vpst-orange">Home</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-vpst-orange">Services</a>
+            <a href="#products" class="block py-2 text-gray-600 hover:text-vpst-orange">Products</a>
+            <a href="#team" class="block py-2 text-gray-600 hover:text-vpst-orange">Our Team</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-vpst-orange">Contact</a>
         </div>
     </header>
 
@@ -59,9 +72,9 @@
         <!-- Hero Section -->
         <section id="home" class="hero-bg text-white h-[60vh] md:h-[80vh] flex items-center">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Expert Installation of Senstar Security Systems</h1>
-                <p class="text-lg md:text-xl max-w-4xl mx-auto mb-8">Villasenor Perimeter Security Technologies (VPST) is your trusted partner for deploying industry-leading Senstar products for critical infrastructure protection.</p>
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">Request a Consultation</a>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Expert Senstar System Installations</h1>
+                <p class="text-lg md:text-xl max-w-4xl mx-auto mb-8">Your trusted partner for deploying industry-leading Senstar products for critical infrastructure protection.</p>
+                <a href="#contact" class="bg-vpst-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">Request a Consultation</a>
             </div>
         </section>
 
@@ -72,17 +85,17 @@
                 <p class="section-subtitle">We provide end-to-end solutions, from initial site assessment and system design to professional installation, integration, and ongoing support for Senstar's advanced security technologies.</p>
                 <div class="grid md:grid-cols-3 gap-8 text-center">
                     <div class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
-                        <i data-lucide="shield-check" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                        <i data-lucide="shield-check" class="mx-auto h-12 w-12 text-vpst-orange mb-4"></i>
                         <h3 class="text-xl font-semibold mb-2">Certified Installation</h3>
                         <p>Our technicians are factory-certified to install and configure Senstar products to the highest standards, ensuring optimal performance and reliability.</p>
                     </div>
                     <div class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
-                        <i data-lucide="blinds" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                        <i data-lucide="blinds" class="mx-auto h-12 w-12 text-vpst-orange mb-4"></i>
                         <h3 class="text-xl font-semibold mb-2">System Integration</h3>
                         <p>We specialize in integrating Senstar systems with your existing security infrastructure, including VMS and access control, for a unified security posture.</p>
                     </div>
                     <div class="p-8 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
-                        <i data-lucide="wrench" class="mx-auto h-12 w-12 text-blue-600 mb-4"></i>
+                        <i data-lucide="wrench" class="mx-auto h-12 w-12 text-vpst-orange mb-4"></i>
                         <h3 class="text-xl font-semibold mb-2">Maintenance & Support</h3>
                         <p>We offer comprehensive maintenance plans and technical support to ensure your perimeter security system remains effective and operational 24/7.</p>
                     </div>
@@ -115,27 +128,16 @@
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Meet Our Team</h2>
                 <p class="section-subtitle">Our dedicated professionals are the foundation of our success, bringing years of experience and a commitment to excellence on every project.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="flex flex-wrap gap-8 justify-center">
+                    <!-- Team Member 1 -->
                     <div class="text-center">
-                        <img src="https://placehold.co/400x400/a0aec0/ffffff?text=Headshot" alt="Team Member 1" class="w-48 h-48 mx-auto rounded-full mb-4 object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/a0aec0/ffffff?text=Photo';">
-                        <h3 class="text-xl font-semibold text-gray-800">John Villasenor</h3>
-                        <p class="text-blue-600">Founder & Lead Engineer</p>
+                        <img src="assets/nieves_headshot.jpg" alt="Founder" class="w-48 h-48 mx-auto rounded-full mb-4 object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/a0aec0/ffffff?text=Photo';">
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-semibold text-gray-800">Nieves Villasenor</h3>
+                            <p class="text-vpst-orange font-semibold">Founder & Lead Engineer</p>
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <img src="https://placehold.co/400x400/a0aec0/ffffff?text=Headshot" alt="Team Member 2" class="w-48 h-48 mx-auto rounded-full mb-4 object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/a0aec0/ffffff?text=Photo';">
-                        <h3 class="text-xl font-semibold text-gray-800">Maria Garcia</h3>
-                        <p class="text-blue-600">Project Manager</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="https://placehold.co/400x400/a0aec0/ffffff?text=Headshot" alt="Team Member 3" class="w-48 h-48 mx-auto rounded-full mb-4 object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/a0aec0/ffffff?text=Photo';">
-                        <h3 class="text-xl font-semibold text-gray-800">David Chen</h3>
-                        <p class="text-blue-600">Senior Technician</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="https://placehold.co/400x400/a0aec0/ffffff?text=Headshot" alt="Team Member 4" class="w-48 h-48 mx-auto rounded-full mb-4 object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x400/a0aec0/ffffff?text=Photo';">
-                        <h3 class="text-xl font-semibold text-gray-800">Emily Rodriguez</h3>
-                        <p class="text-blue-600">System Integration Specialist</p>
-                    </div>
+                    <!-- To add a new team member, copy the div block above and paste it here -->
                 </div>
             </div>
         </section>
@@ -150,23 +152,23 @@
                         <div class="grid md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Your Name</label>
-                                <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="John Doe" required>
+                                <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-vpst-orange focus:border-vpst-orange block w-full p-2.5" placeholder="John Doe" required>
                             </div>
                             <div>
                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your Email</label>
-                                <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@company.com" required>
+                                <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-vpst-orange focus:border-vpst-orange block w-full p-2.5" placeholder="name@company.com" required>
                             </div>
                         </div>
                         <div class="mb-6">
                             <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Subject</label>
-                            <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Project Inquiry" required>
+                            <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-vpst-orange focus:border-vpst-orange block w-full p-2.5" placeholder="Project Inquiry" required>
                         </div>
                         <div class="mb-6">
                             <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your Message</label>
-                            <textarea id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Tell us about your project..."></textarea>
+                            <textarea id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-vpst-orange focus:border-vpst-orange block w-full p-2.5" placeholder="Tell us about your project..."></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">Send Message</button>
+                            <button type="submit" class="bg-vpst-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">Send Message</button>
                         </div>
                     </form>
                 </div>
@@ -175,9 +177,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-vpst-dark text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Villasenor Perimeter Security Technologies. All Rights Reserved.</p>
+            <p>&copy; 2025 Villasenor Perimeter Security Technologies. All Rights Reserved.</p>
         </div>
     </footer>
 
