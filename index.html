@@ -7,23 +7,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/1F2937/FFFFFF?text=VPST&font=inter');
-            background-size: cover;
-            background-position: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/vpst_logo.svg'), radial-gradient(circle, #6B7280, #4B5563);
+            background-size: auto, 60%, cover;
+            background-position: center, center, center;
+            background-repeat: no-repeat;
         }
         .section-title {
             @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
         }
         .section-subtitle {
-            @apply text-lg text-gray-600 mb-16 text-center max-w-3xl mx-auto;
-            margin-bottom: 1rem;
+            @apply text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto;
         }
     </style>
     <script>
@@ -33,6 +33,9 @@
                     colors: {
                         'vpst-orange': '#F97316',
                         'vpst-dark': '#1F2937',
+                    },
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'sans-serif'],
                     }
                 }
             }
@@ -45,7 +48,8 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center">
-                <img src="assets/vpst_logo.png" alt="VPST Logo" class="h-12 mr-2" onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/1F2937?text=VPST';">
+                <img src="assets/vpst_logo.svg" alt="VPST Logo" class="h-12 mr-3" onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/1F2937?text=VPST';">
+                <span class="font-orbitron text-vpst-dark font-bold text-lg hidden sm:block">VILLASENOR PERIMETER <span class="text-vpst-orange">SECURITY TECHNOLOGIES</span></span>
             </a>
             <div class="hidden md:flex space-x-8">
                 <a href="#home" class="text-gray-600 hover:text-vpst-orange transition-colors">Home</a>
@@ -79,7 +83,7 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="py-20 bg-white">
+        <section id="services" class="py-16 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Our Expertise</h2>
                 <p class="section-subtitle">We provide end-to-end solutions, from initial site assessment and system design to professional installation, integration, and ongoing support for Senstar's advanced security technologies.</p>
@@ -104,7 +108,7 @@
         </section>
 
         <!-- Products Section -->
-        <section id="products" class="py-20">
+        <section id="products" class="py-16">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Specializing in Senstar Products</h2>
                 <p class="section-subtitle">We have deep expertise across the full range of Senstar's industry-leading perimeter intrusion detection systems (PIDS).</p>
@@ -112,9 +116,9 @@
                     <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">FiberPatrol</p></div>
                     <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">FlexZone</p></div>
                     <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">LM100</p></div>
-                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">Ultrawave</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">UltraWave</p></div>
                     <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">Symphony</p></div>
-                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">Starnet2</p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">StarNet 2</p></div>
                     <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">OmniTrax</p></div>
                     <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">XField</p></div>
                     <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-24"><p class="font-semibold">Network Manager</p></div>
@@ -124,7 +128,7 @@
         </section>
 
         <!-- Our Team Section -->
-        <section id="team" class="py-20 bg-white">
+        <section id="team" class="py-16 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Meet Our Team</h2>
                 <p class="section-subtitle">Our dedicated professionals are the foundation of our success, bringing years of experience and a commitment to excellence on every project.</p>
@@ -143,7 +147,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20">
+        <section id="contact" class="py-16">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Get In Touch</h2>
                 <p class="section-subtitle">Have a project in mind or need a quote? We're here to help. Contact us today to discuss your perimeter security needs.</p>
